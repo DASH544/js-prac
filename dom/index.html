@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <div>
+        <button onclick="change()">add</button>
+        <button onclick="changesub()">sub</button>
+    </div>
+</body>
+<script>
+    const root =document.querySelector("#root")
+    let counter=0
+    function change()
+    {
+        counter++
+        render(counter)
+    }
+    function changesub()
+    {
+        counter--
+        render(counter)
+    }
+
+    function counterComponent(counter)
+    {
+        const comp=document.createElement("p")
+        comp.textContent=`${counter}`
+        return comp
+    }
+    function render(counter)
+    {
+        root.innerHTML=""
+        const elem=counterComponent(counter)
+        root.appendChild(elem)
+    }
+</script>
+</html>

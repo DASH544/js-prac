@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Example</title>
+</head>
+<body>
+  <div>
+    <button id="decrement">-</button>
+    <span id="counter">0</span>
+    <button id="increment">+</button>
+  </div>
+
+  <script >
+    document.addEventListener("DOMContentLoaded", () => {
+  let counter = 0;
+
+  const counterDisplay = document.getElementById("counter");
+  const incrementButton = document.getElementById("increment");
+  const decrementButton = document.getElementById("decrement");
+
+  const updateCounterDisplay = () => {
+    counterDisplay.textContent = counter;
+  };
+
+  incrementButton.addEventListener("click", () => {
+    counter++;
+    updateCounterDisplay();
+  });
+
+  decrementButton.addEventListener("click", () => {
+    counter--;
+    updateCounterDisplay();
+  });
+
+  updateCounterDisplay();
+});
+
+  </script>
+</body>
+</html>
