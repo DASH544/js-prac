@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="bg-black min-h-screen grid place-items-center">
+    <div class="bg-violet-800 px-8 py-6 flex flex-col justify-between items-center gap-8">
+      <div class="flex justify-between items-center gap-4">
+        <input id="input-city" type="text" placeholder="Enter City" />
+        <button onclick="fetchData()">
+          <img src="search.svg" class="w-8" alt="" />
+        </button>
+      </div>
+      <div class="text-center flex flex-col gap-8">
+        <div class="">
+          <img src="" alt="" />
+          <h1 id="city-temp" class="text-3xl">22</h1>
+          <h2 id="city-name">new york</h2>
+        </div>
+        <div class="flex justify-between items-center gap-8">
+            <div>
+                <img src="" alt="">
+                <h1 id="humidity"></h1>
+                <h1>Humidity</h1>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h1 id="wind"></h1>
+                <h1>Wind Speed</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
